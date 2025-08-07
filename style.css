@@ -10,7 +10,7 @@
   0% { offset-distance: 0;}
   /* 70% { offset-distance: 46%;}
   80% {offset-distance: 90%;} */
-  100% {offset-distance: 100%;}
+  100% {offset-distance: 90%;}
 }
 .container{
   background-image: url("https://images.unsplash.com/photo-1631719420609-1077967002bf?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXNwaGFsdHxlbnwwfHwwfHx8MA%3D%3D");
@@ -46,6 +46,7 @@
     curve to 90% 0% with 95% 20%,
   );
   transform: rotate(90deg);
+  /* animation: car-1-2 linear 3s forwards; */
 }
 .three{
   /* straight */
@@ -95,4 +96,66 @@
   height:350px;
   position: relative;
   border: 2px solid red;
+}
+
+
+.other{
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.test{
+  width:300px;
+  height:350px;
+  border: 2px solid orange;
+  position: relative;
+}
+.box{
+  width:22%;
+  height:22%;
+  
+  position: absolute;
+}
+.box.one{
+  left:55%;
+  top:15.5%;
+  border: 2px solid red;
+}
+.box.two{
+  left:55%;
+  top:50%;
+  offset-path: shape(
+    from 65% 60%,
+    curve to 65% 50% with 65% 55%,
+    curve to 90% 0% with 95% 20%,
+  );
+  border: 2px solid red;
+  animation: car-1-2 linear 3s forwards;
+}
+.box.four{
+  top:50%;
+  left:22.5%;
+  border: 2px solid purple;
+  animation: car-1-2 linear 3s forwards;
+  offset-path: shape(
+    from 35% 60%,
+    curve to 35% 50% with 35% 55%,
+    curve to 10% 0% with 5% 20%
+  );
+  animation: car-1-2 linear 3s forwards;
+}
+.box.six{
+  top:15.5%;
+  left:22.5%;
+  border: 2px solid purple;
+  
+}
+.one-two-end{
+  position: absolute;
+  top:0;
+  left:90%;
+  width:2px;
+  height:2px;
+  background-color: red;
 }
