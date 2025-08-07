@@ -6,10 +6,10 @@
   animation: car1 linear 3s forwards;
 } */
 
-@keyframes car1 {
+@keyframes car-1-2 {
   0% { offset-distance: 0;}
-  70% { offset-distance: 46%;}
-  80% {offset-distance: 90%;}
+  /* 70% { offset-distance: 46%;}
+  80% {offset-distance: 90%;} */
   100% {offset-distance: 100%;}
 }
 .container{
@@ -24,6 +24,7 @@
 
 }
 .car{
+  z-index: 1;
   width:22%;
   height:22%;
   background-image: url("images/car-clock.png");
@@ -32,53 +33,66 @@
 }
 .one{
   position: absolute;
-  left:50%;
+  left:55%;
   top:15.5%;
-  /* display:none; */
-  /* offset-path: path('M 170 440 C 228 211 227 187 -87 182');
-  animation: car1 linear 3s forwards; */
 }
-.two{
+.thousands #two{
   position: absolute;
-  left:50%;
+  left:55%;
   top:50%;
-  /* display:none; */
+  offset-path: shape(
+    from 65% 60%,
+    curve to 65% 50% with 65% 55%,
+    curve to 90% 0% with 95% 20%,
+  );
+  transform: rotate(90deg);
 }
 .three{
+  /* straight */
   position: absolute;
-  left:23.5%;
+  left:39%;
   bottom:12%;
   transform:rotate(270deg);
-  /* display:none; */
 }
 .four{
+  /* same as 2 but from otherside */
   top:50%;
+  left:22.5%;
+  border: 2px solid red;
   position: absolute;
-  /* display:none; */
 }
 .five{
+  /* straight */
   position: absolute;
-  /* display:none; */
-  left:23.5%;
+  left:39%;
   bottom:46%;
   transform:rotate(270deg);
 }
-.six{
+#six{
+  /* same as 1 but from otherside */
   position: absolute;
   top:15.5%;
-
-  /* display:none; */
+  left:22.5%;
+  /* border: 2px solid red; */
+  clip-path:shape(
+    from 22.5% 15.5%,
+    curve by -5% -15.5% with 65% -15%,
+    curve by 0% 0% with 15% 20%,
+  );
+  background: red;
+  /* animation: car-1-2 linear 3s forwards; */
 }
 .seven{
+  /* straight */
   position: absolute;
   transform:rotate(270deg);
-  left:23.5%;
+  left:39%;
   top:1%;
-  /* display:none; */
 }
 
 .thousands{
-  width: 23%;
-  height:50vh;
+  width: 300px;
+  height:350px;
   position: relative;
+  border: 2px solid red;
 }
